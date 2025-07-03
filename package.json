@@ -1,0 +1,29 @@
+{
+  "name": "playwright-tech-interview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test-dev": "cross-env ENV=dev BROWSER=chrome cucumber-js --config=config/cucumber.js",
+    "test-uat": "cross-env ENV=uat BROWSER=chrome cucumber-js --config=config/cucumber.js",
+    "test-firefox": "cross-env ENV=dev BROWSER=firefox cucumber-js --config=config/cucumber.js",
+    "test-webkit": "cross-env ENV=dev BROWSER=webkit cucumber-js --config=config/cucumber.js",
+    "post-test": "npx ts-node src/helper/report.ts",
+    "clean": "rm -rf test-results"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.3.0",
+    "@playwright/test": "^1.53.2",
+    "@types/node": "^24.0.10",
+    "allure-commandline": "^2.34.1",
+    "allure-cucumberjs": "^3.3.0",
+    "allure-playwright": "^3.3.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^17.0.1",
+    "multiple-cucumber-html-reporter": "^3.9.3",
+    "ts-node": "^10.9.2"
+  }
+}
