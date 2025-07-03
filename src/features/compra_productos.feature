@@ -13,7 +13,7 @@ Feature: Compra de productos en Sauce Demo
       | standard_user | secret_sauce |
       | visual_user   | secret_sauce |
 
-  Scenario: Inicio de sesión incorrecto
+  Scenario Outline: Inicio de sesión incorrecto
     Given que estoy en la página de inicio de Sauce Demo
     When ingreso mis credenciales username "<username>" y password "<password>"
     And hago clic en el botón Login
